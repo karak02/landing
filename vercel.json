@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "cleanUrls": false,
+  "routes": [
+    {
+      "src": "/api/submit",
+      "dest": "/api/submit.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/Clinic/clinic_landing.html",
+      "dest": "/Clinic/clinic_landing.html"
+    },
+    {
+      "src": "/Food_Francises/food_landing.html",
+      "dest": "/Food_Francises/food_landing.html"
+    },
+    {
+      "src": "/Luxury_Fashion_Boutiques/luxury_boutique_landing_v2%20(1).html",
+      "dest": "/Luxury_Fashion_Boutiques/luxury_boutique_landing_v2 (1).html"
+    },
+    {
+      "src": "/Professional_Services/Professional_Real.html",
+      "dest": "/Professional_Services/Professional_Real.html"
+    },
+    {
+      "src": "/Tours_%26_Travels/tours_v3.html",
+      "dest": "/Tours_&_Travels/tours_v3.html"
+    }
+  ]
+}
