@@ -935,7 +935,7 @@
       'Source': 'clinic'
     };
     if (btn) { btn.disabled = true; btn.querySelector('span').textContent = 'Sending…'; }
-    fetch('/api/submit', {
+    fetch(`${window.location.origin}/api/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)

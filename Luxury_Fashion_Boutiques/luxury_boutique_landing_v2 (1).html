@@ -2476,7 +2476,7 @@ if (leakEl) {
   }
 })();
 
-// Form submit handler — sends to Node server (/api/submit), which writes to Airtable using .env
+// Form submit handler — sends to the host API (/api/submit), which writes to Airtable using Vercel env vars
 function handleFormSubmit(e) {
   e.preventDefault();
   const form = e.target;
@@ -2497,7 +2497,7 @@ function handleFormSubmit(e) {
     'Source': 'luxury_boutique'
   };
   if (btn) { const s = btn.querySelector('span'); if (s) s.textContent = 'Sending…'; btn.disabled = true; }
-  fetch('/api/submit', {
+  fetch(`${window.location.origin}/api/submit`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)

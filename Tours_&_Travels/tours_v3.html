@@ -1688,7 +1688,7 @@ const dashObs=new IntersectionObserver((entries)=>{
 const dw=document.querySelector('.dashboard-wrap');
 if(dw)dashObs.observe(dw);
 
-// Form submit — sends to Node server (/api/submit), which writes to Airtable using .env
+// Form submit — sends to the host API (/api/submit), which writes to Airtable using Vercel env vars
 function handleToursSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('auditForm');
@@ -1708,7 +1708,7 @@ function handleToursSubmit(e) {
     'Source': 'tours'
   };
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
-  fetch('/api/submit', {
+  fetch(`${window.location.origin}/api/submit`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)

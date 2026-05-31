@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Pages</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0c1117;
+      --panel: rgba(15, 23, 34, 0.88);
+      --panel-border: rgba(255, 255, 255, 0.10);
+      --text: #e5eef9;
+      --muted: #94a3b8;
+      --accent: #7dd3fc;
+      --accent-strong: #38bdf8;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.20), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(125, 211, 252, 0.14), transparent 28%),
+        linear-gradient(135deg, #060b10 0%, #0c1117 45%, #111827 100%);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .shell {
+      width: min(960px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+    .hero {
+      padding: clamp(28px, 6vw, 56px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.02;
+      max-width: 12ch;
+    }
+    p {
+      margin: 16px 0 0;
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      padding: clamp(20px, 4vw, 36px);
+    }
+    a.card {
+      display: block;
+      padding: 18px 18px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(15, 23, 34, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(125, 211, 252, 0.45);
+      background: rgba(17, 24, 39, 0.88);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .card span {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+    .footer {
+      padding: 0 24px 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .api {
+      color: var(--accent-strong);
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">Vercel Hosted Landing Pages</p>
+      <h1>Choose a landing page.</h1>
+      <p>
+        This deployment serves the landing pages as static routes and sends form submissions to the
+        Vercel API endpoint at <span class="api">/api/submit</span>.
+      </p>
+    </section>
+
+    <section class="grid" aria-label="Landing page links">
+      <a class="card" href="/Clinic/clinic_landing.html">
+        <h2>Clinic</h2>
+        <span>/Clinic/clinic_landing.html</span>
+      </a>
+      <a class="card" href="/Food_Francises/food_landing.html">
+        <h2>Food Franchises</h2>
+        <span>/Food_Francises/food_landing.html</span>
+      </a>
+      <a class="card" href="/Luxury_Fashion_Boutiques/luxury_boutique_landing_v2%20(1).html">
+        <h2>Luxury Fashion Boutiques</h2>
+        <span>/Luxury_Fashion_Boutiques/luxury_boutique_landing_v2 (1).html</span>
+      </a>
+      <a class="card" href="/Professional_Services/Professional_Real.html">
+        <h2>Professional Services</h2>
+        <span>/Professional_Services/Professional_Real.html</span>
+      </a>
+      <a class="card" href="/Tours_%26_Travels/tours_v3.html">
+        <h2>Tours &amp; Travels</h2>
+        <span>/Tours_&_Travels/tours_v3.html</span>
+      </a>
+    </section>
+
+    <div class="footer">
+      API endpoint: <span class="api">/api/submit</span>
+    </div>
+  </main>
+</body>
+</html>
